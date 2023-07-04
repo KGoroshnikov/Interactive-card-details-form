@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="bg-grad">
+    <img class="bg-grad-img" src="images/bg-main-desktop.png" alt="bg-main">
+    <div class="card-back">
+      <img src="images/bg-card-back.png" alt="card-back">
+      <p id="card-cvc">000</p>
+    </div>
+    <div class="card-front">
+      <img class="bg-card-front" src="images/bg-card-front.png" alt="card-front">
+      <img class="card-logo" src="images/card-logo.svg" alt="card-logo">
+      <p id="card-code">0000 0000 0000 0000</p>
+      <p id="card-holder">Jane Appleseed</p>
+      <p id="card-date">00/00</p>
+    </div>
+  </div>
+  <div class="main-container">
+    <div id="main-inpt" class="user-input">
+      <div class="cardholder-block">
+        <label for="cardholder-inpt">
+          CARDHOLDER NAME
+        </label>
+        <input maxlength="40" class="inpt" id="cardholder-inpt" type="text" placeholder="e.g. Jane Appleseed">
+        <p style="display: none;" id="cardholder-warning" class="wrong-message">
+          Wrong format
+        </p>
+      </div>
+      <div class="cardholder-block">
+        <label for="cardnumber-inpt">
+          CARD NUMBER
+        </label>
+        <input maxlength="19" pattern="\d*" class="inpt" id="cardnumber-inpt" type="text" placeholder="e.g. 1234 5678 9123 0000">
+        <p style="display: none;" id="cardnumber-warning" class="wrong-message">
+          Wrong format
+        </p>
+      </div>
+      <div class="last-block">
+        <div class="cardholder-block">
+          <label for="exp-date-mm-inpt">
+            EXP. DATE (MM/YY)
+          </label>
+          <label for="exp-date-yy-inpt"></label>
+          <div class="exp-date-mm-yy">
+            <input maxlength="2" class="inpt exp-date" id="exp-date-mm-inpt" type="text" placeholder="MM">
+            <input maxlength="2" class="inpt exp-date" id="exp-date-yy-inpt" type="text" placeholder="YY">
+          </div>
+          <p style="display: none;" id="cardDate-warning" class="wrong-message">
+            Wrong format
+          </p>
+        </div>
+        <div class="cardholder-block">
+          <label for="cvc-inpt">
+            CVC
+          </label>
+          <input maxlength="3" class="inpt" id="cvc-inpt" type="text" placeholder="e.g. 123">
+          <p style="display: none;" id="cardCvc-warning" class="wrong-message">
+            Wrong format
+          </p>
+        </div>
+      </div>
+      <button onclick="confirm()" id="button-confirm">
+        Confirm
+      </button>
+    </div>
+    <div style="display: none;" id="thank-message">
+      <img src="images/icon-complete.svg" alt="complete">
+      <p class="THANKYOU">THANK YOU!</p>
+      <p class="thanks-description">We've added your card details</p>
+      <button onclick="reloadPage()">
+        Continue
+      </button>
+    </div>
+  </div>
+  <script src="index.js"></script>
+
+  <!--
+
+  0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+  Thank you!
+  We've added your card details
+  Continue
+  -->
+</body>
+</html>

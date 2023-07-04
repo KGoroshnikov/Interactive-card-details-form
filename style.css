@@ -1,0 +1,264 @@
+body{
+  margin: 0;
+  display: flex;
+}
+*{
+  font-family: Space Grotesk;
+  font-size: 18px;
+}
+
+p{
+  margin: 0;
+}
+
+.bg-grad{
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.card-front{
+  position: absolute;
+  top: 20%;
+  left: 5vw;
+}
+
+.card-back{
+  position: absolute;
+  top: 50%;
+  left: 10vw;
+}
+
+.card-logo{
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
+#card-code{
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  font-size: 30px;
+  color: white;
+}
+
+#card-holder{
+  position: absolute;
+  left: 30px;
+  top: 80%;
+  color: white;
+}
+
+#card-date{
+  position: absolute;
+  right: 30px;
+  top: 80%;
+  color: white;
+}
+
+#card-cvc{
+  position: absolute;
+  right: 60px;
+  top: 108px;
+  color: white;
+}
+
+.main-container{
+  flex: 1;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-input{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  color: hsl(278, 68%, 11%);
+}
+
+.inpt{
+  margin-top: 10px;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 8px;
+  padding: 10px 20px;
+  width: auto;
+}
+
+.inpt::placeholder{
+  color: hsl(270, 3%, 87%);
+}
+
+.cardholder-block{
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-date{
+  width: 50px;
+  margin-right: 10px;
+}
+
+.last-block{
+  display: flex;
+  justify-content: space-between;
+}
+
+#button-confirm{
+  padding: 16px 0px;
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+#button-confirm:hover{
+  background-color: hsl(278, 68%, 41%);
+  cursor: pointer;
+}
+
+.wrong-message{
+  color: hsl(0, 100%, 66%);
+  font-size: 14px;
+}
+
+#thank-message{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+}
+
+#thank-message img{
+  height: 100px;
+  width: 100px;
+}
+
+.thanks-description{
+  color: hsl(279, 6%, 55%);
+}
+
+.THANKYOU{
+  font-size: 35px;
+}
+
+#thank-message button{
+  padding: 16px 150px;
+  background-color: hsl(278, 68%, 11%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  transition: background-color 0.15s;
+}
+
+#thank-message button:hover{
+  background-color: hsl(278, 68%, 41%);
+  cursor: pointer;
+}
+
+@media (max-width: 1200px){
+  .card-front{
+    position: absolute;
+    top: 20%;
+    left: 0;
+  }
+  
+  .card-back{
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+
+  .user-input{
+    width: 300px;
+  }
+
+  #cvc-inpt{
+    width: 150px;
+  }
+
+  #thank-message button{
+    padding: 16px 90px;
+  }
+}
+
+@media (max-width: 790px){
+  body{
+    flex-direction: column;
+  }
+
+  .bg-grad{
+    width: 100vw;
+    height: auto;
+    margin-bottom: 20%;
+  }
+
+  .bg-grad-img{
+    width: 100%;
+    content: url(images/bg-main-mobile.png);
+  }
+
+  .card-front,
+  .card-back{
+    width: 80%;
+    height: auto;
+  }
+
+  .card-front{
+    top: 50%;
+    left: 20px;
+  }
+
+  .card-back{
+    top: 5%;
+    left: 60px;
+  }
+
+  .bg-card-front,
+  .card-back img{
+    width: 100%;
+  }
+
+  .card-logo{
+    width: 16%;
+    left: 20px;
+  }
+
+  #card-code{
+    top: 45%;
+    left: 20px;
+    font-size: 6vw;
+  }
+
+  #card-cvc{
+    font-size: 6vw;
+    top: 40%;
+    right: 14%;
+  }
+  
+  #card-holder{
+    left: 20px;
+    top: 70%;
+  }
+  
+  #card-date{
+    right: 20px;
+    top: 70%;
+  }
+
+  .inpt{
+    width: 70vw;
+  }
+
+  .last-block{
+    flex-direction: column;
+  }
+
+  .user-input{
+    width: 90vw;
+  }
+}
